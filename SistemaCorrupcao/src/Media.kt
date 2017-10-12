@@ -1,8 +1,13 @@
 class Media(
-        var tipo:Corrupcao,
-        var valor:Float,
-        var usuario:Usuario){
-    override fun toString(): String {
-        return "${this.tipo}, ${this.valor}"
+        private val tipoCorrupcao: Corrupcao,
+        private val valorAssociado:Double):Classificacao(){
+
+    fun get_tipoCorrupcao():Corrupcao{
+        return this.tipoCorrupcao
     }
+
+    override fun toString(): String {
+        return "Média - Tipo: ${this.tipoCorrupcao} | Valor: ${this.valorAssociado}"
+    }
+
 }
